@@ -13,6 +13,13 @@ public class Main {
 
         checkingAccount.deposit(500);
         checkingAccount.displayAccount();
+
+        checkingAccount.withdrawal(600);
+        checkingAccount.displayAccount();
+        checkingAccount.withdrawal(400);
+        checkingAccount.displayAccount();
+        checkingAccount.processWithdrawal(300);
+        checkingAccount.displayAccount();
     }
 
 }

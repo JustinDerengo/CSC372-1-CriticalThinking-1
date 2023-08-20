@@ -19,7 +19,6 @@ public class CheckingAccount extends BankAccount {
 
     //method will display all super class and subclass attributes.
     public void displayAccount() {
-        System.out.println(this.firstName);
         System.out.printf("Name on account: %s %s \n Account ID: %d \n Account Balance: %f \n Interest Rate: %f \n", this.firstName, this.lastName, this.accountID, this.balance, this.interestRate);
     }
 }

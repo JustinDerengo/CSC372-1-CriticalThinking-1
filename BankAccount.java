@@ -47,16 +47,16 @@
         //withdrawal method accepts a single value double dollar amount and subtracts the paramater value from 
         //existing balance
         public void withdrawal(double amount) {
-            try {
+
+            if ((this.balance - amount) < 0) {
+                System.out.println("Amount requested exceeds available funds");
+            } else {
                 this.balance = this.balance - amount;
-                if ((this.balance - amount) < 0) {
-                    throw new Exception("Ammount to be withdrawn exceeds funds");
-                }
-            } catch (Exception e) {
-                System.out.println("Error! :" + e.getMessage());
             }
-            
+
         }
+            
+        
     
         public void accountSummary() {
             System.out.printf("Name on account: %s %s \n Account ID: %d \n Account Balance: %f \n", this.firstName, this.lastName, this.accountID, this.balance);
