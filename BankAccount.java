@@ -1,4 +1,4 @@
-public class BankAccount {
+
     public class BankAccount {
         protected String firstName;
         protected String lastName;
@@ -47,7 +47,15 @@ public class BankAccount {
         //withdrawal method accepts a single value double dollar amount and subtracts the paramater value from 
         //existing balance
         public void Withdrawal(double amount) {
-            this.balance = this.balance - amount;
+            try {
+                this.balance = this.balance - amount;
+                if ((this.balance - amount) < 0) {
+                    throw new Exception("Ammount to be withdrawn exceeds funds");
+                }
+            } catch (Exception e) {
+                System.out.println("Error! :" + e.getMessage());
+            }
+            
         }
     
         public void AccountSummary() {
@@ -56,4 +64,3 @@ public class BankAccount {
     
     }
     
-}
