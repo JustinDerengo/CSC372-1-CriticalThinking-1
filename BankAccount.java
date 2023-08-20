@@ -40,13 +40,13 @@
         }
     
         //deposit method accepts a single value double parameter and adds the value to the existing balance
-        public void Deposit(double amount) {
+        public void deposit(double amount) {
             this.balance = this.balance + amount;
         }
     
         //withdrawal method accepts a single value double dollar amount and subtracts the paramater value from 
         //existing balance
-        public void Withdrawal(double amount) {
+        public void withdrawal(double amount) {
             try {
                 this.balance = this.balance - amount;
                 if ((this.balance - amount) < 0) {
@@ -58,7 +58,7 @@
             
         }
     
-        public void AccountSummary() {
+        public void accountSummary() {
             System.out.printf("Name on account: %s%s \n Account ID: %d \n Account Balance: %f \n", this.firstName, this.lastName, this.accountID, this.balance);
         }
     
