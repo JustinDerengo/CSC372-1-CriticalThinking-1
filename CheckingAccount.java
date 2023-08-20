@@ -7,7 +7,7 @@ public class CheckingAccount extends BankAccount {
         this.interestRate = .15;
     }
 
-    
+    //method will allow overdraft withdrawals and will charge a %30 fee
     public void processWithdrawal (double amount) {
         if ((this.balance - amount) < 0) {
             this.balance = this.balance - amount - 30;
@@ -17,7 +17,9 @@ public class CheckingAccount extends BankAccount {
         }
     }
 
+    //method will display all super class and subclass attributes.
     public void displayAccount() {
-        System.out.printf("Name on account: %s%s \n Account ID: %d \n Account Balance: %f \n Interest Rate: %f \n", this.firstName, this.lastName, this.accountID, this.balance, this.interestRate);
+        System.out.println(this.firstName);
+        System.out.printf("Name on account: %s %s \n Account ID: %d \n Account Balance: %f \n Interest Rate: %f \n", this.firstName, this.lastName, this.accountID, this.balance, this.interestRate);
     }
 }

@@ -59,7 +59,7 @@
         }
     
         public void accountSummary() {
-            System.out.printf("Name on account: %s%s \n Account ID: %d \n Account Balance: %f \n", this.firstName, this.lastName, this.accountID, this.balance);
+            System.out.printf("Name on account: %s %s \n Account ID: %d \n Account Balance: %f \n", this.firstName, this.lastName, this.accountID, this.balance);
         }
     
     }
